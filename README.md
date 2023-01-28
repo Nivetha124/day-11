@@ -1,1 +1,16 @@
 # day-11
+input()
+k = int(input())
+a = ""
+list = []
+for i in s:
+    a += i
+    if len(set(a)) < k:
+        continue
+    if len(set(a)) > k:
+        m = a[0]
+        a = a.replace(m, '')
+        continue
+    if len(set(a)) == k:
+        list.append(a)
+print(max(list, key = len))
